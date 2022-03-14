@@ -1,3 +1,11 @@
-const age = parseInt(prompt("How old are you?"));
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
 
-console.log(isNaN(age));
+function onLoginSubmit(event) {
+    event.preventDefault();
+    const username = loginInput.value;
+    loginForm.classList.add("hidden");
+    console.log(username);
+}
+
+loginForm.addEventListener("submit", onLoginSubmit);
